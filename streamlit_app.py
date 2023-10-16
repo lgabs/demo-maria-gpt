@@ -17,6 +17,11 @@ from langchain.embeddings.openai import OpenAIEmbeddings
 #     persist_directory="embeddings", embedding_function=OpenAIEmbeddings()
 # )
 
+# the above code loads an already calculated embeddings
+# it's breaking in ths part, so let's test it 
+
+print(chromadb.config)
+
 # From here down is all the StreamLit UI.
 st.set_page_config(page_title="LangChain Demo", page_icon=":robot:")
 st.header("Maria dos Anjos Demo")
