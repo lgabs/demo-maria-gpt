@@ -12,15 +12,11 @@ import chromadb
 from langchain.vectorstores import Chroma
 from langchain.embeddings.openai import OpenAIEmbeddings
 
-# how I am using chroma as a vectorstore
-# docsearch = Chroma(
-#     persist_directory="embeddings", embedding_function=OpenAIEmbeddings()
-# )
-
-# the above code loads an already calculated embeddings
-# it's breaking in ths part, so let's test it 
-
-print(chromadb.config)
+# how I am using chroma as a vectorstore and this works locally
+# so let's test this in streamlit cloud app
+docsearch = Chroma(
+    persist_directory="embeddings", embedding_function=OpenAIEmbeddings()
+)
 
 # From here down is all the StreamLit UI.
 st.set_page_config(page_title="LangChain Demo", page_icon=":robot:")
